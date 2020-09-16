@@ -1,38 +1,119 @@
-.App {
-  text-align: center;
+:root {
+  --dark: #011627;
+  --red: #ff3366;
+  --lightblue: #345699;
+  --white: #f6f7f8;
+  --blue: #205690;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  background: var(--blue);
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  height: 100vh;
+}
+#drum-machine {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  height: 400px;
+  width: 300px;
+  background-color: var(--white);
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 35px 15px 25px 15px;
+}
+.power-btn {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: none;
+  font-size: 18px;
+  font-family: "Inconsolata", monospace;
+  color: #fff;
+  background-color: #4232ff;
+}
+.display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 125px;
+  background-color: var(--lightblue);
+  font-size: 20px;
+  font-family: "Inconsolata", monospace;
+  color: #fff;
+}
+
+.drum-pad-container {
+  display: grid;
+  grid-template:
+    "q w e" 75px
+    "a s d" 75px
+    "z x c" 75px
+    /75px 75px 75px;
+}
+
+.drum-pad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65px;
+  width: 65px;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 24px;
   color: white;
+  background-color: var(--blue);
+  border-top: 3px solid var(--white);
+  border-right: 4px solid var(--dark);
+  border-bottom: 3px solid var(--dark);
+  border-left: 4px solid var(--white);
+}
+.active-true {
+  border-top: 5px solid var(--white);
+  border-right: 4px solid var(--white);
+  border-bottom: 3px solid var(--white);
+  border-left: 6px solid var(--white);
+}
+#dp-q {
+  grid-area: q;
 }
 
-.App-link {
-  color: #61dafb;
+#dp-w {
+  grid-area: w;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#dp-e {
+  grid-area: e;
+}
+
+#dp-a {
+  grid-area: a;
+}
+
+#dp-s {
+  grid-area: s;
+}
+
+#dp-d {
+  grid-area: d;
+}
+
+#dp-z {
+  grid-area: z;
+}
+
+#dp-x {
+  grid-area: x;
+}
+
+#dp-c {
+  grid-area: c;
 }
